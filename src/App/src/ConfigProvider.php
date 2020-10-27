@@ -38,7 +38,6 @@ class ConfigProvider
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
             'factories'  => [
-                Helper\CookieHelper::class => Helper\CookieHelperFactory::class,
                 Middleware\CookieHelperMiddleware::class => Middleware\CookieHelperMiddlewareFactory::class,
 
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,

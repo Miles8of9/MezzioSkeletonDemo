@@ -9,8 +9,15 @@ use Laminas\View\Helper\AbstractHelper;
 
 class Cookie extends AbstractHelper
 {
-    public function __invoke(string $cookieName) : string
+    private $cookies;
+
+    public function __invoke(string $cookieName) : ?string
     {
-        return 'TestCookieValue';
+        return isset($this->cookies[$cookieName]) ? $this->cookies[$cookieName] : null;
+    }
+
+    public function setCookies(array $cookies) : void
+    {
+        $this->cookies = $cookies;
     }
 }

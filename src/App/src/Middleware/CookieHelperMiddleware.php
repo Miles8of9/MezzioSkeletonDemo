@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Middleware;
 
-use App\Helper\CookieHelper;
+use App\ViewHelper\Cookie;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -14,7 +14,7 @@ class CookieHelperMiddleware implements MiddlewareInterface
 {
     private $helper;
 
-    public function __construct(CookieHelper $helper)
+    public function __construct(Cookie $helper)
     {
         $this->helper = $helper;
     }
