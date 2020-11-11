@@ -1,0 +1,10 @@
+<?php
+$pageTitle = "Admin Login";
+?>
+
+<div class="row justify-content-center">
+    <div class="col-sm-6 shadow-sm p-4">
+        <div class="text-center p-3"><h2>Admin login</h2></div>
+        <?= $this->partial('auth::_loginFormPartial', ['loginForm' => $this->loginForm]) ?>
+    </div>
+</div>

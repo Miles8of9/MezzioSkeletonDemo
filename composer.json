@@ -42,7 +42,11 @@
         "composer/package-versions-deprecated": "^1.10.99",
         "laminas/laminas-component-installer": "^2.1.2",
         "laminas/laminas-config-aggregator": "^1.2",
+        "laminas/laminas-crypt": "^3.3",
         "laminas/laminas-diactoros": "^2.3.0",
+        "laminas/laminas-form": "^2.15",
+        "laminas/laminas-i18n": "^2.11",
+        "laminas/laminas-i18n-resources": "^2.6",
         "laminas/laminas-servicemanager": "^3.4",
         "laminas/laminas-stdlib": "^3.2.1",
         "laminas/laminas-zendframework-bridge": "^1.0",
@@ -67,8 +71,9 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/App/src/",
-            "User\\": "src/User/src/",
-            "Admin\\": "src/Admin/src/"
+            "Admin\\": "src/Admin/src/",
+            "Auth\\": "src/Auth/src/",
+            "User\\": "src/User/src/"
         }
     },
     "autoload-dev": {

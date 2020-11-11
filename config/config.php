@@ -13,6 +13,11 @@ $cacheConfig = [
 ];
 
 $aggregator = new ConfigAggregator([
+    \Laminas\I18n\ConfigProvider::class,
+    \Laminas\Form\ConfigProvider::class,
+    \Laminas\Hydrator\ConfigProvider::class,
+    \Laminas\InputFilter\ConfigProvider::class,
+    \Laminas\Filter\ConfigProvider::class,
     \Mezzio\Authentication\LaminasAuthentication\ConfigProvider::class,
     \Mezzio\Authentication\Session\ConfigProvider::class,
     \Mezzio\Authentication\ConfigProvider::class,
@@ -39,8 +44,9 @@ $aggregator = new ConfigAggregator([
 
     // Default App module config
     App\ConfigProvider::class,
-    User\ConfigProvider::class,
     Admin\ConfigProvider::class,
+    Auth\ConfigProvider::class,
+    User\ConfigProvider::class,
 
     // Load application config in a pre-defined order in such a way that local settings
     // overwrite global settings. (Loaded as first to last):

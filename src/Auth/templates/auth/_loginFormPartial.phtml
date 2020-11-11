@@ -1,0 +1,26 @@
+<?php
+$form = $this->loginForm;
+$form->prepare();
+?>
+
+<?= $this->form()->openTag($form); ?>
+    <div class="row">
+        <div class="col-md-12 form-group mb-4">
+            <i class="fas fa-fw fa-user text-primary" aria-hidden="true"></i><?= $this->formLabel($form->get('username')); ?>
+            <?= $this->formElement($form->get('username')); ?>
+            <?= $this->formElementErrors($form->get('username')); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group mb-4">
+            <i class="fas fa-fw fa-lock text-primary" aria-hidden="true"></i><?= $this->formLabel($form->get('password')); ?>
+            <?= $this->formElement($form->get('password')); ?>
+            <?= $this->formElementErrors($form->get('password')); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <button type="submit" id="btnSubmit" class="btn btn-primary px-5" tabindex="3">Login <span id="spinner" class="d-none"><i class="fas fa-spinner fa-spin"></i></span></button>
+        </div>
+    </div>
+<?= $this->form()->closeTag($form); ?>

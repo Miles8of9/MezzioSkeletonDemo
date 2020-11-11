@@ -40,9 +40,11 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
 
+    $app->route('/user/login', Auth\Handler\UserLoginHandler::class, ['GET', 'POST'], 'user.login');
     $app->get('/user', User\Handler\DashboardHandler::class, 'user');
     $app->get('/user/dashboard', User\Handler\DashboardHandler::class, 'user.dashboard');
 
+    $app->route('/admin/login', Auth\Handler\AdminLoginHandler::class, ['GET', 'POST'], 'admin.login');
     $app->get('/admin', Admin\Handler\DashboardHandler::class, 'admin');
     $app->get('/admin/dashboard', Admin\Handler\DashboardHandler::class, 'admin.dashboard');
 };
